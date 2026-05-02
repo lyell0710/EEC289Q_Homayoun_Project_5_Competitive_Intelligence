@@ -1,0 +1,40 @@
+{
+  "target": "PayGraph",
+  "positioning_summary": "PayGraph appears positioned based on extracted signals in pricing, features, and target-customer language.",
+  "key_differentiators": [],
+  "pricing_signals": [
+    {
+      "claim": "Introduced instant self-serve onboarding for merchants processing under $50k monthly.",
+      "evidence_ids": [
+        "e2"
+      ],
+      "pricing_type": "unknown"
+    }
+  ],
+  "target_segments": [
+    {
+      "segment": "Enterprise",
+      "evidence_ids": [
+        "e1"
+      ]
+    }
+  ],
+  "identified_weaknesses": [],
+  "conflicts": [],
+  "evidence_map": [
+    {
+      "evidence_id": "e1",
+      "doc_id": "p1",
+      "quote": "Designed for enterprise payment orchestration with dedicated success engineers."
+    },
+    {
+      "evidence_id": "e2",
+      "doc_id": "p2",
+      "quote": "Introduced instant self-serve onboarding for merchants processing under $50k monthly."
+    }
+  ],
+  "confidence": {
+    "overall": "low",
+    "notes": "Rule-based baseline; improve with stronger semantic extraction in Week 3."
+  }
+}

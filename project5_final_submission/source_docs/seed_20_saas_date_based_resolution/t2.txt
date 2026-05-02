@@ -1,0 +1,6 @@
+doc_id: t2
+source_type: product_page
+title: Current pricing
+date: 2026-04-25
+
+Starter plan is now $25/user monthly after adding workflow automation.

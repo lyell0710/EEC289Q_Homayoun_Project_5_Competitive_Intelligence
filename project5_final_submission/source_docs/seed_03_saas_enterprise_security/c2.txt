@@ -1,0 +1,6 @@
+doc_id: c2
+source_type: blog_post
+title: Mid-market expansion
+date: 2026-03-20
+
+New mid-market customers adopt VaultDesk for SOC2 workflows.

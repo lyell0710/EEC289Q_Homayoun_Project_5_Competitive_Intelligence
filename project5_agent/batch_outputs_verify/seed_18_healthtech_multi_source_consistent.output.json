@@ -1,0 +1,28 @@
+{
+  "target": "ClinicFlow AI",
+  "positioning_summary": "ClinicFlow AI appears positioned based on extracted signals in pricing, features, and target-customer language.",
+  "key_differentiators": [
+    {
+      "claim": "Clinics report 30% faster authorization turnaround after deployment.",
+      "evidence_ids": [
+        "e1"
+      ],
+      "signal_strength": "medium"
+    }
+  ],
+  "pricing_signals": [],
+  "target_segments": [],
+  "identified_weaknesses": [],
+  "conflicts": [],
+  "evidence_map": [
+    {
+      "evidence_id": "e1",
+      "doc_id": "r2",
+      "quote": "Clinics report 30% faster authorization turnaround after deployment."
+    }
+  ],
+  "confidence": {
+    "overall": "low",
+    "notes": "Rule-based baseline; improve with stronger semantic extraction in Week 3."
+  }
+}

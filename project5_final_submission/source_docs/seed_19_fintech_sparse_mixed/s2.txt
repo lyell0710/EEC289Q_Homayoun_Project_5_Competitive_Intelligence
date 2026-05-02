@@ -1,0 +1,6 @@
+doc_id: s2
+source_type: product_page
+title: FAQ
+date: 2026-01-15
+
+Supports dual-approval workflows and role-based controls.

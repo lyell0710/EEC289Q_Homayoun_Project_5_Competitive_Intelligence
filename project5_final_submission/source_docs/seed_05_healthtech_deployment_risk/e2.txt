@@ -1,0 +1,6 @@
+doc_id: e2
+source_type: press_release
+title: Expansion
+date: 2026-02-20
+
+PulseTrack signs five regional health systems this quarter.

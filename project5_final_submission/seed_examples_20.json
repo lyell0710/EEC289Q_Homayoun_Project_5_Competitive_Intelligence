@@ -1,0 +1,439 @@
+[
+  {
+    "example_id": "seed_01_saas_pricing_conflict",
+    "industry": "B2B SaaS",
+    "input": {
+      "target": "NimbusCRM",
+      "documents": [
+        {"doc_id": "a1", "source_type": "product_page", "title": "Pricing", "date": "2026-02-10", "content": "Starter is $29/seat. Growth is $79/seat. API access is only on Growth and above."},
+        {"doc_id": "a2", "source_type": "press_release", "title": "SMB Plan", "date": "2025-12-15", "content": "SMB plan starts at $19/user and includes API support."}
+      ]
+    },
+    "output": {
+      "target": "NimbusCRM",
+      "positioning_summary": "Tiered CRM targeting SMB to enterprise with conflicting entry pricing claims.",
+      "key_differentiators": [{"claim": "API gating by plan tier.", "evidence_ids": ["e1"], "signal_strength": "high"}],
+      "pricing_signals": [{"claim": "$29/$79 seat-based tiers and a conflicting $19 SMB claim.", "evidence_ids": ["e1", "e2"], "pricing_type": "tiered"}],
+      "target_segments": [{"segment": "SMB and enterprise teams", "evidence_ids": ["e1", "e2"]}],
+      "identified_weaknesses": [{"weakness": "Inconsistent pricing communication.", "evidence_ids": ["e1", "e2"]}],
+      "conflicts": [{"topic": "entry_pricing", "claims": [{"statement": "$29 seat-based starter", "evidence_ids": ["e1"]}, {"statement": "$19 SMB entry claim", "evidence_ids": ["e2"]}], "resolution_status": "unresolved", "resolution_rationale": "Conflicting public pricing across sources."}],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "a1", "quote": "Starter is $29/seat. Growth is $79/seat."}, {"evidence_id": "e2", "doc_id": "a2", "quote": "SMB plan starts at $19/user."}],
+      "confidence": {"overall": "medium", "notes": "Concrete data with unresolved conflict."}
+    }
+  },
+  {
+    "example_id": "seed_02_saas_sparse_doc",
+    "industry": "B2B SaaS",
+    "input": {
+      "target": "FlowBoard",
+      "documents": [
+        {"doc_id": "b1", "source_type": "press_release", "title": "Launch", "date": "2026-01-01", "content": "FlowBoard launches a next-gen productivity platform for modern teams."}
+      ]
+    },
+    "output": {
+      "target": "FlowBoard",
+      "positioning_summary": "Insufficient evidence",
+      "key_differentiators": [],
+      "pricing_signals": [],
+      "target_segments": [],
+      "identified_weaknesses": [],
+      "conflicts": [],
+      "evidence_map": [],
+      "confidence": {"overall": "low", "notes": "Marketing-only text without factual competitive signal."}
+    }
+  },
+  {
+    "example_id": "seed_03_saas_enterprise_security",
+    "industry": "B2B SaaS",
+    "input": {
+      "target": "VaultDesk",
+      "documents": [
+        {"doc_id": "c1", "source_type": "product_page", "title": "Enterprise Security", "date": "2026-03-11", "content": "VaultDesk offers SSO, SCIM, and audit logs on Enterprise contracts."},
+        {"doc_id": "c2", "source_type": "blog_post", "title": "Mid-market expansion", "date": "2026-03-20", "content": "New mid-market customers adopt VaultDesk for SOC2 workflows."}
+      ]
+    },
+    "output": {
+      "target": "VaultDesk",
+      "positioning_summary": "Security-forward platform with enterprise compliance posture and mid-market traction.",
+      "key_differentiators": [{"claim": "SSO/SCIM/audit logs for enterprise buyers.", "evidence_ids": ["e1"], "signal_strength": "high"}],
+      "pricing_signals": [{"claim": "Enterprise features are contract-gated.", "evidence_ids": ["e1"], "pricing_type": "contract"}],
+      "target_segments": [{"segment": "Enterprise and mid-market compliance-focused teams", "evidence_ids": ["e1", "e2"]}],
+      "identified_weaknesses": [{"weakness": "Advanced controls unavailable on lower tiers.", "evidence_ids": ["e1"]}],
+      "conflicts": [],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "c1", "quote": "SSO, SCIM, and audit logs on Enterprise contracts."}, {"evidence_id": "e2", "doc_id": "c2", "quote": "New mid-market customers adopt VaultDesk for SOC2 workflows."}],
+      "confidence": {"overall": "high", "notes": "Consistent and concrete claims across documents."}
+    }
+  },
+  {
+    "example_id": "seed_04_healthtech_segment_conflict",
+    "industry": "HealthTech",
+    "input": {
+      "target": "CardioWatch Cloud",
+      "documents": [
+        {"doc_id": "d1", "source_type": "blog_post", "title": "Hospital focus", "date": "2026-01-08", "content": "Most customers are regional hospital systems with 200+ beds."},
+        {"doc_id": "d2", "source_type": "pitch_deck", "title": "Every setting", "date": "2025-11-01", "content": "Ideal for every care setting from solo clinics to national chains."}
+      ]
+    },
+    "output": {
+      "target": "CardioWatch Cloud",
+      "positioning_summary": "Appears enterprise-hospital focused, but broader go-to-market claims are inconsistent.",
+      "key_differentiators": [],
+      "pricing_signals": [],
+      "target_segments": [{"segment": "Large hospital systems", "evidence_ids": ["e1"]}],
+      "identified_weaknesses": [{"weakness": "ICP messaging inconsistency.", "evidence_ids": ["e1", "e2"]}],
+      "conflicts": [{"topic": "target_segment_scope", "claims": [{"statement": "Regional hospitals with 200+ beds", "evidence_ids": ["e1"]}, {"statement": "Every care setting", "evidence_ids": ["e2"]}], "resolution_status": "unresolved", "resolution_rationale": "Narrow adoption evidence vs broad marketing claim."}],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "d1", "quote": "Most customers are regional hospital systems with 200+ beds."}, {"evidence_id": "e2", "doc_id": "d2", "quote": "Ideal for every care setting from solo clinics to national chains."}],
+      "confidence": {"overall": "medium", "notes": "Clear contradiction in segmentation claims."}
+    }
+  },
+  {
+    "example_id": "seed_05_healthtech_deployment_risk",
+    "industry": "HealthTech",
+    "input": {
+      "target": "PulseTrack",
+      "documents": [
+        {"doc_id": "e1", "source_type": "product_page", "title": "Integration", "date": "2026-02-18", "content": "PulseTrack integrates with Epic and Cerner. Typical deployment takes 10-12 weeks."},
+        {"doc_id": "e2", "source_type": "press_release", "title": "Expansion", "date": "2026-02-20", "content": "PulseTrack signs five regional health systems this quarter."}
+      ]
+    },
+    "output": {
+      "target": "PulseTrack",
+      "positioning_summary": "Interoperable remote monitoring platform aimed at health systems.",
+      "key_differentiators": [{"claim": "Epic and Cerner integration.", "evidence_ids": ["e1"], "signal_strength": "high"}],
+      "pricing_signals": [],
+      "target_segments": [{"segment": "Regional health systems", "evidence_ids": ["e2"]}],
+      "identified_weaknesses": [{"weakness": "10-12 week deployment may slow adoption.", "evidence_ids": ["e1"]}],
+      "conflicts": [],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "e1", "quote": "integrates with Epic and Cerner. deployment takes 10-12 weeks."}, {"evidence_id": "e2", "doc_id": "e2", "quote": "signs five regional health systems"}],
+      "confidence": {"overall": "high", "notes": "Specific integration, segment, and deployment evidence."}
+    }
+  },
+  {
+    "example_id": "seed_06_healthtech_pricing_unknown",
+    "industry": "HealthTech",
+    "input": {
+      "target": "NeuroSense",
+      "documents": [
+        {"doc_id": "f1", "source_type": "pitch_deck", "title": "Deck", "date": "2026-01-01", "content": "Contact sales for pricing. AI triage improves review speed by 40%."}
+      ]
+    },
+    "output": {
+      "target": "NeuroSense",
+      "positioning_summary": "Sales-led clinical AI product with limited public pricing transparency.",
+      "key_differentiators": [{"claim": "Claims 40% review-speed improvement.", "evidence_ids": ["e1"], "signal_strength": "medium"}],
+      "pricing_signals": [{"claim": "Pricing is sales-led only.", "evidence_ids": ["e1"], "pricing_type": "contract"}],
+      "target_segments": [],
+      "identified_weaknesses": [{"weakness": "No transparent published pricing.", "evidence_ids": ["e1"]}],
+      "conflicts": [],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "f1", "quote": "Contact sales for pricing. improves review speed by 40%."}],
+      "confidence": {"overall": "medium", "notes": "One-source evidence only."}
+    }
+  },
+  {
+    "example_id": "seed_07_fintech_usage_pricing",
+    "industry": "FinTech",
+    "input": {
+      "target": "LedgerAPI",
+      "documents": [
+        {"doc_id": "g1", "source_type": "product_page", "title": "Pricing", "date": "2026-04-01", "content": "LedgerAPI charges $0.002 per transaction with volume discounts above 10M monthly calls."},
+        {"doc_id": "g2", "source_type": "blog_post", "title": "Use cases", "date": "2026-03-15", "content": "Popular among neobanks and payment processors."}
+      ]
+    },
+    "output": {
+      "target": "LedgerAPI",
+      "positioning_summary": "Transaction-based API positioned for high-volume fintech infrastructure teams.",
+      "key_differentiators": [{"claim": "Volume-discounted transaction pricing model.", "evidence_ids": ["e1"], "signal_strength": "high"}],
+      "pricing_signals": [{"claim": "$0.002 per transaction plus volume discounts.", "evidence_ids": ["e1"], "pricing_type": "usage_based"}],
+      "target_segments": [{"segment": "Neobanks and payment processors", "evidence_ids": ["e2"]}],
+      "identified_weaknesses": [],
+      "conflicts": [],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "g1", "quote": "$0.002 per transaction with volume discounts"}, {"evidence_id": "e2", "doc_id": "g2", "quote": "Popular among neobanks and payment processors."}],
+      "confidence": {"overall": "high", "notes": "Clear usage pricing and segment evidence."}
+    }
+  },
+  {
+    "example_id": "seed_08_fintech_regulated_segment",
+    "industry": "FinTech",
+    "input": {
+      "target": "KYCStream",
+      "documents": [
+        {"doc_id": "h1", "source_type": "product_page", "title": "Compliance", "date": "2026-02-12", "content": "Built for regulated institutions with audit-ready case logs and policy workflows."},
+        {"doc_id": "h2", "source_type": "press_release", "title": "SMB launch", "date": "2026-02-28", "content": "Launching lightweight onboarding for startups under 20 employees."}
+      ]
+    },
+    "output": {
+      "target": "KYCStream",
+      "positioning_summary": "Compliance-first platform balancing regulated-enterprise roots with new SMB packaging.",
+      "key_differentiators": [{"claim": "Audit-ready logs and policy workflows.", "evidence_ids": ["e1"], "signal_strength": "high"}],
+      "pricing_signals": [],
+      "target_segments": [{"segment": "Regulated institutions", "evidence_ids": ["e1"]}, {"segment": "Startups under 20 employees", "evidence_ids": ["e2"]}],
+      "identified_weaknesses": [{"weakness": "Potentially split messaging between enterprise compliance and SMB simplicity.", "evidence_ids": ["e1", "e2"]}],
+      "conflicts": [],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "h1", "quote": "Built for regulated institutions with audit-ready case logs"}, {"evidence_id": "e2", "doc_id": "h2", "quote": "lightweight onboarding for startups under 20 employees"}],
+      "confidence": {"overall": "medium", "notes": "Segment expansion could reflect intentional multi-segment strategy."}
+    }
+  },
+  {
+    "example_id": "seed_09_fintech_capability_conflict",
+    "industry": "FinTech",
+    "input": {
+      "target": "RiskPulse",
+      "documents": [
+        {"doc_id": "i1", "source_type": "product_page", "title": "Features", "date": "2026-02-01", "content": "Real-time fraud scoring is available only on Enterprise."},
+        {"doc_id": "i2", "source_type": "blog_post", "title": "Starter package", "date": "2026-02-14", "content": "Starter users now get real-time fraud scoring at no extra cost."}
+      ]
+    },
+    "output": {
+      "target": "RiskPulse",
+      "positioning_summary": "Fraud platform with conflicting public statements on feature gating.",
+      "key_differentiators": [{"claim": "Real-time fraud scoring is core differentiation.", "evidence_ids": ["e1", "e2"], "signal_strength": "high"}],
+      "pricing_signals": [],
+      "target_segments": [{"segment": "Enterprise and starter-tier fintech teams", "evidence_ids": ["e1", "e2"]}],
+      "identified_weaknesses": [{"weakness": "Feature entitlement communication is inconsistent.", "evidence_ids": ["e1", "e2"]}],
+      "conflicts": [{"topic": "feature_gating", "claims": [{"statement": "Real-time scoring only on Enterprise", "evidence_ids": ["e1"]}, {"statement": "Starter includes real-time scoring", "evidence_ids": ["e2"]}], "resolution_status": "unresolved", "resolution_rationale": "Direct contradiction across sources."}],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "i1", "quote": "available only on Enterprise"}, {"evidence_id": "e2", "doc_id": "i2", "quote": "Starter users now get real-time fraud scoring"}],
+      "confidence": {"overall": "medium", "notes": "Conflict lowers certainty despite strong signal relevance."}
+    }
+  },
+  {
+    "example_id": "seed_10_saas_contract_only",
+    "industry": "B2B SaaS",
+    "input": {
+      "target": "OpsGrid",
+      "documents": [
+        {"doc_id": "j1", "source_type": "product_page", "title": "Pricing", "date": "2026-03-05", "content": "OpsGrid is contract-only with annual minimum commitments."},
+        {"doc_id": "j2", "source_type": "blog_post", "title": "Customer profile", "date": "2026-03-06", "content": "Best fit for multi-site operations teams."}
+      ]
+    },
+    "output": {
+      "target": "OpsGrid",
+      "positioning_summary": "Enterprise operations platform with contract-first monetization.",
+      "key_differentiators": [],
+      "pricing_signals": [{"claim": "Contract-only annual commitments.", "evidence_ids": ["e1"], "pricing_type": "contract"}],
+      "target_segments": [{"segment": "Multi-site operations teams", "evidence_ids": ["e2"]}],
+      "identified_weaknesses": [{"weakness": "Contract-only motion may hinder self-serve adoption.", "evidence_ids": ["e1"]}],
+      "conflicts": [],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "j1", "quote": "contract-only with annual minimum commitments"}, {"evidence_id": "e2", "doc_id": "j2", "quote": "Best fit for multi-site operations teams."}],
+      "confidence": {"overall": "high", "notes": "Direct pricing and segment statements are explicit."}
+    }
+  },
+  {
+    "example_id": "seed_11_saas_integration_strength",
+    "industry": "B2B SaaS",
+    "input": {
+      "target": "StackPilot",
+      "documents": [
+        {"doc_id": "k1", "source_type": "product_page", "title": "Integrations", "date": "2026-02-09", "content": "Native integrations with Salesforce, HubSpot, and Snowflake."},
+        {"doc_id": "k2", "source_type": "press_release", "title": "Partner update", "date": "2026-02-22", "content": "Launched certified Salesforce package and migration toolkit."}
+      ]
+    },
+    "output": {
+      "target": "StackPilot",
+      "positioning_summary": "Integration-centric platform focused on CRM/data-stack interoperability.",
+      "key_differentiators": [{"claim": "Broad native and certified integrations.", "evidence_ids": ["e1", "e2"], "signal_strength": "high"}],
+      "pricing_signals": [],
+      "target_segments": [{"segment": "Revenue operations teams using Salesforce/HubSpot/Snowflake", "evidence_ids": ["e1"]}],
+      "identified_weaknesses": [],
+      "conflicts": [],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "k1", "quote": "Native integrations with Salesforce, HubSpot, and Snowflake."}, {"evidence_id": "e2", "doc_id": "k2", "quote": "certified Salesforce package and migration toolkit"}],
+      "confidence": {"overall": "high", "notes": "Multi-source integration proof supports differentiation."}
+    }
+  },
+  {
+    "example_id": "seed_12_saas_marketing_noise",
+    "industry": "B2B SaaS",
+    "input": {
+      "target": "BrandFlow",
+      "documents": [
+        {"doc_id": "l1", "source_type": "blog_post", "title": "Vision", "date": "2026-01-20", "content": "BrandFlow is the future of collaborative growth and world-class brand execution."},
+        {"doc_id": "l2", "source_type": "press_release", "title": "Award", "date": "2026-01-21", "content": "Recognized as most innovative brand platform."}
+      ]
+    },
+    "output": {
+      "target": "BrandFlow",
+      "positioning_summary": "Insufficient evidence",
+      "key_differentiators": [],
+      "pricing_signals": [],
+      "target_segments": [],
+      "identified_weaknesses": [],
+      "conflicts": [],
+      "evidence_map": [],
+      "confidence": {"overall": "low", "notes": "Documents are mostly promotional and lack concrete competitive signals."}
+    }
+  },
+  {
+    "example_id": "seed_13_healthtech_pricing_conflict",
+    "industry": "HealthTech",
+    "input": {
+      "target": "MediRoute",
+      "documents": [
+        {"doc_id": "m1", "source_type": "product_page", "title": "Pricing", "date": "2026-04-02", "content": "Platform fee starts at $12,000 per year for provider groups."},
+        {"doc_id": "m2", "source_type": "press_release", "title": "Launch package", "date": "2025-12-10", "content": "Early adopter package starts at $8,000 annually."}
+      ]
+    },
+    "output": {
+      "target": "MediRoute",
+      "positioning_summary": "Provider-focused workflow platform with inconsistent published starting price.",
+      "key_differentiators": [],
+      "pricing_signals": [{"claim": "Annual platform-fee model with conflicting entry points.", "evidence_ids": ["e1", "e2"], "pricing_type": "contract"}],
+      "target_segments": [{"segment": "Provider groups", "evidence_ids": ["e1"]}],
+      "identified_weaknesses": [{"weakness": "Pricing inconsistency across source materials.", "evidence_ids": ["e1", "e2"]}],
+      "conflicts": [{"topic": "entry_pricing", "claims": [{"statement": "$12,000 annual start", "evidence_ids": ["e1"]}, {"statement": "$8,000 annual early adopter start", "evidence_ids": ["e2"]}], "resolution_status": "partially_resolved", "resolution_rationale": "Newer product page may supersede older launch pricing."}],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "m1", "quote": "starts at $12,000 per year"}, {"evidence_id": "e2", "doc_id": "m2", "quote": "starts at $8,000 annually"}],
+      "confidence": {"overall": "medium", "notes": "Conflict remains but timing context offers partial resolution."}
+    }
+  },
+  {
+    "example_id": "seed_14_healthtech_sparse_with_one_signal",
+    "industry": "HealthTech",
+    "input": {
+      "target": "EchoCare",
+      "documents": [
+        {"doc_id": "n1", "source_type": "press_release", "title": "Partnership", "date": "2026-03-03", "content": "EchoCare signs strategic partnership with a major device manufacturer."}
+      ]
+    },
+    "output": {
+      "target": "EchoCare",
+      "positioning_summary": "Insufficient evidence",
+      "key_differentiators": [],
+      "pricing_signals": [],
+      "target_segments": [],
+      "identified_weaknesses": [],
+      "conflicts": [],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "n1", "quote": "signs strategic partnership with a major device manufacturer"}],
+      "confidence": {"overall": "low", "notes": "Partnership signal exists but not enough for robust competitive profiling."}
+    }
+  },
+  {
+    "example_id": "seed_15_fintech_sales_led",
+    "industry": "FinTech",
+    "input": {
+      "target": "TreasuryBeam",
+      "documents": [
+        {"doc_id": "o1", "source_type": "product_page", "title": "Treasury Suite", "date": "2026-02-16", "content": "Automated liquidity forecasting for CFO teams. Contact sales for enterprise pricing."},
+        {"doc_id": "o2", "source_type": "blog_post", "title": "Customer stories", "date": "2026-02-18", "content": "Adopted by multinational treasury teams managing 20+ bank relationships."}
+      ]
+    },
+    "output": {
+      "target": "TreasuryBeam",
+      "positioning_summary": "Enterprise treasury analytics platform with sales-led packaging.",
+      "key_differentiators": [{"claim": "Automated liquidity forecasting capability.", "evidence_ids": ["e1"], "signal_strength": "high"}],
+      "pricing_signals": [{"claim": "Enterprise pricing via sales contact.", "evidence_ids": ["e1"], "pricing_type": "contract"}],
+      "target_segments": [{"segment": "Multinational treasury teams", "evidence_ids": ["e2"]}],
+      "identified_weaknesses": [{"weakness": "No public transparent pricing.", "evidence_ids": ["e1"]}],
+      "conflicts": [],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "o1", "quote": "Contact sales for enterprise pricing."}, {"evidence_id": "e2", "doc_id": "o2", "quote": "Adopted by multinational treasury teams"}],
+      "confidence": {"overall": "high", "notes": "Differentiator and segment are concrete, despite opaque pricing."}
+    }
+  },
+  {
+    "example_id": "seed_16_fintech_mixed_messaging",
+    "industry": "FinTech",
+    "input": {
+      "target": "PayGraph",
+      "documents": [
+        {"doc_id": "p1", "source_type": "product_page", "title": "Enterprise claims", "date": "2026-04-05", "content": "Designed for enterprise payment orchestration with dedicated success engineers."},
+        {"doc_id": "p2", "source_type": "press_release", "title": "Self-serve launch", "date": "2026-04-12", "content": "Introduced instant self-serve onboarding for merchants processing under $50k monthly."}
+      ]
+    },
+    "output": {
+      "target": "PayGraph",
+      "positioning_summary": "Platform appears to span enterprise orchestration and SMB self-serve motions.",
+      "key_differentiators": [{"claim": "Dedicated success-engineer support for enterprise workflows.", "evidence_ids": ["e1"], "signal_strength": "medium"}],
+      "pricing_signals": [],
+      "target_segments": [{"segment": "Enterprise merchants", "evidence_ids": ["e1"]}, {"segment": "Small merchants under $50k monthly volume", "evidence_ids": ["e2"]}],
+      "identified_weaknesses": [{"weakness": "Potentially fragmented go-to-market narrative.", "evidence_ids": ["e1", "e2"]}],
+      "conflicts": [],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "p1", "quote": "Designed for enterprise payment orchestration"}, {"evidence_id": "e2", "doc_id": "p2", "quote": "self-serve onboarding for merchants under $50k monthly"}],
+      "confidence": {"overall": "medium", "notes": "Signals may reflect segmentation strategy rather than direct conflict."}
+    }
+  },
+  {
+    "example_id": "seed_17_saas_capability_limit",
+    "industry": "B2B SaaS",
+    "input": {
+      "target": "InsightLoop",
+      "documents": [
+        {"doc_id": "q1", "source_type": "product_page", "title": "Features", "date": "2026-03-17", "content": "Custom dashboards are available only on Pro and Enterprise tiers."},
+        {"doc_id": "q2", "source_type": "blog_post", "title": "Growth narrative", "date": "2026-03-19", "content": "Teams choose InsightLoop for flexible reporting."}
+      ]
+    },
+    "output": {
+      "target": "InsightLoop",
+      "positioning_summary": "Reporting-focused SaaS with tier-gated dashboard customization.",
+      "key_differentiators": [{"claim": "Flexible reporting and custom dashboards.", "evidence_ids": ["e1", "e2"], "signal_strength": "medium"}],
+      "pricing_signals": [{"claim": "Feature access depends on plan tier.", "evidence_ids": ["e1"], "pricing_type": "tiered"}],
+      "target_segments": [{"segment": "Analytics-heavy business teams", "evidence_ids": ["e2"]}],
+      "identified_weaknesses": [{"weakness": "Customization not available to lower-tier customers.", "evidence_ids": ["e1"]}],
+      "conflicts": [],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "q1", "quote": "available only on Pro and Enterprise tiers"}, {"evidence_id": "e2", "doc_id": "q2", "quote": "Teams choose InsightLoop for flexible reporting"}],
+      "confidence": {"overall": "medium", "notes": "Useful but partially marketing-heavy evidence."}
+    }
+  },
+  {
+    "example_id": "seed_18_healthtech_multi_source_consistent",
+    "industry": "HealthTech",
+    "input": {
+      "target": "ClinicFlow AI",
+      "documents": [
+        {"doc_id": "r1", "source_type": "product_page", "title": "Product", "date": "2026-01-30", "content": "Automates prior authorization workflows for outpatient clinics."},
+        {"doc_id": "r2", "source_type": "blog_post", "title": "Customer result", "date": "2026-02-03", "content": "Clinics report 30% faster authorization turnaround after deployment."}
+      ]
+    },
+    "output": {
+      "target": "ClinicFlow AI",
+      "positioning_summary": "Workflow automation tool focused on outpatient clinic authorization operations.",
+      "key_differentiators": [{"claim": "Prior-authorization automation with reported turnaround improvements.", "evidence_ids": ["e1", "e2"], "signal_strength": "high"}],
+      "pricing_signals": [],
+      "target_segments": [{"segment": "Outpatient clinics", "evidence_ids": ["e1", "e2"]}],
+      "identified_weaknesses": [],
+      "conflicts": [],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "r1", "quote": "Automates prior authorization workflows for outpatient clinics."}, {"evidence_id": "e2", "doc_id": "r2", "quote": "30% faster authorization turnaround"}],
+      "confidence": {"overall": "high", "notes": "Consistent positioning and measurable impact across sources."}
+    }
+  },
+  {
+    "example_id": "seed_19_fintech_sparse_mixed",
+    "industry": "FinTech",
+    "input": {
+      "target": "WireShield",
+      "documents": [
+        {"doc_id": "s1", "source_type": "press_release", "title": "Announcement", "date": "2026-01-12", "content": "WireShield unveils a modern platform for secure treasury operations."},
+        {"doc_id": "s2", "source_type": "product_page", "title": "FAQ", "date": "2026-01-15", "content": "Supports dual-approval workflows and role-based controls."}
+      ]
+    },
+    "output": {
+      "target": "WireShield",
+      "positioning_summary": "Security-oriented treasury tooling with limited public commercial detail.",
+      "key_differentiators": [{"claim": "Dual-approval workflows and role-based controls.", "evidence_ids": ["e2"], "signal_strength": "medium"}],
+      "pricing_signals": [],
+      "target_segments": [],
+      "identified_weaknesses": [{"weakness": "No explicit pricing or segment details in sources.", "evidence_ids": ["e1", "e2"]}],
+      "conflicts": [],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "s1", "quote": "modern platform for secure treasury operations"}, {"evidence_id": "e2", "doc_id": "s2", "quote": "dual-approval workflows and role-based controls"}],
+      "confidence": {"overall": "low", "notes": "Feature signal exists but competitive picture is incomplete."}
+    }
+  },
+  {
+    "example_id": "seed_20_saas_date_based_resolution",
+    "industry": "B2B SaaS",
+    "input": {
+      "target": "TaskOrbit",
+      "documents": [
+        {"doc_id": "t1", "source_type": "press_release", "title": "2025 launch price", "date": "2025-06-01", "content": "TaskOrbit launches at $15/user monthly."},
+        {"doc_id": "t2", "source_type": "product_page", "title": "Current pricing", "date": "2026-04-25", "content": "Starter plan is now $25/user monthly after adding workflow automation."}
+      ]
+    },
+    "output": {
+      "target": "TaskOrbit",
+      "positioning_summary": "SMB workflow tool with price increase tied to expanded automation capability.",
+      "key_differentiators": [{"claim": "Workflow automation added to starter offering.", "evidence_ids": ["e2"], "signal_strength": "medium"}],
+      "pricing_signals": [{"claim": "Historical $15 vs current $25 user-based pricing.", "evidence_ids": ["e1", "e2"], "pricing_type": "seat_based"}],
+      "target_segments": [{"segment": "SMB workflow teams", "evidence_ids": ["e1", "e2"]}],
+      "identified_weaknesses": [],
+      "conflicts": [{"topic": "entry_pricing_over_time", "claims": [{"statement": "$15/user at launch", "evidence_ids": ["e1"]}, {"statement": "$25/user current pricing", "evidence_ids": ["e2"]}], "resolution_status": "resolved_with_preference", "resolution_rationale": "Newer dated product page likely reflects current commercial terms."}],
+      "evidence_map": [{"evidence_id": "e1", "doc_id": "t1", "quote": "launches at $15/user monthly"}, {"evidence_id": "e2", "doc_id": "t2", "quote": "Starter plan is now $25/user monthly"}],
+      "confidence": {"overall": "high", "notes": "Conflict is explainable by timeline and explicit date context."}
+    }
+  }
+]

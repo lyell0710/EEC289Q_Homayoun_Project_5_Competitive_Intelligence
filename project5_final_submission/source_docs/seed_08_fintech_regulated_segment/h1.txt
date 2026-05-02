@@ -1,0 +1,6 @@
+doc_id: h1
+source_type: product_page
+title: Compliance
+date: 2026-02-12
+
+Built for regulated institutions with audit-ready case logs and policy workflows.

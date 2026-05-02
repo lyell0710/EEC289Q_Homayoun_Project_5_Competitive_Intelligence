@@ -1,0 +1,37 @@
+{
+  "project": "Competitive Intelligence Agent",
+  "notes": "Tool endpoints are optional for this project type. Included here for completeness.",
+  "tools": [
+    {
+      "name": "analyze_competitive_documents",
+      "description": "Analyze one target and one-or-more source documents, then return structured competitive intelligence JSON.",
+      "parameters": {
+        "type": "object",
+        "required": ["target", "documents"],
+        "properties": {
+          "target": {
+            "type": "string",
+            "description": "Target company or product name."
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["doc_id", "source_type", "title", "content"],
+              "properties": {
+                "doc_id": { "type": "string" },
+                "source_type": {
+                  "type": "string",
+                  "enum": ["product_page", "blog_post", "press_release", "pitch_deck", "other"]
+                },
+                "title": { "type": "string" },
+                "date": { "type": "string" },
+                "content": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

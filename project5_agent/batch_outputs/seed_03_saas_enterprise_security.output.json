@@ -1,0 +1,46 @@
+{
+  "target": "VaultDesk",
+  "positioning_summary": "VaultDesk appears positioned based on extracted signals in pricing, features, and target-customer language.",
+  "key_differentiators": [
+    {
+      "claim": "VaultDesk offers SSO, SCIM, and audit logs on Enterprise contracts.",
+      "evidence_ids": [
+        "e1"
+      ],
+      "signal_strength": "medium"
+    }
+  ],
+  "pricing_signals": [],
+  "target_segments": [
+    {
+      "segment": "Enterprise",
+      "evidence_ids": [
+        "e1"
+      ]
+    },
+    {
+      "segment": "Mid-market",
+      "evidence_ids": [
+        "e2"
+      ]
+    }
+  ],
+  "identified_weaknesses": [],
+  "conflicts": [],
+  "evidence_map": [
+    {
+      "evidence_id": "e1",
+      "doc_id": "c1",
+      "quote": "VaultDesk offers SSO, SCIM, and audit logs on Enterprise contracts."
+    },
+    {
+      "evidence_id": "e2",
+      "doc_id": "c2",
+      "quote": "New mid-market customers adopt VaultDesk for SOC2 workflows."
+    }
+  ],
+  "confidence": {
+    "overall": "medium",
+    "notes": "Rule-based baseline; improve with stronger semantic extraction in Week 3."
+  }
+}

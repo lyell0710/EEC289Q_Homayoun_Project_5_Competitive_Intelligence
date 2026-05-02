@@ -1,0 +1,6 @@
+doc_id: a1
+source_type: product_page
+title: Pricing
+date: 2026-02-10
+
+Starter is $29/seat. Growth is $79/seat. API access is only on Growth and above.

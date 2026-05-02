@@ -1,0 +1,53 @@
+{
+  "target": "RiskPulse",
+  "positioning_summary": "RiskPulse appears positioned based on extracted signals in pricing, features, and target-customer language.",
+  "key_differentiators": [
+    {
+      "claim": "Real-time fraud scoring is available only on Enterprise.",
+      "evidence_ids": [
+        "e1"
+      ],
+      "signal_strength": "medium"
+    }
+  ],
+  "pricing_signals": [],
+  "target_segments": [
+    {
+      "segment": "Enterprise",
+      "evidence_ids": [
+        "e1"
+      ]
+    }
+  ],
+  "identified_weaknesses": [
+    {
+      "weakness": "Real-time fraud scoring is available only on Enterprise.",
+      "evidence_ids": [
+        "e1"
+      ]
+    },
+    {
+      "weakness": "Starter users now get real-time fraud scoring at no extra cost.",
+      "evidence_ids": [
+        "e2"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "evidence_map": [
+    {
+      "evidence_id": "e1",
+      "doc_id": "i1",
+      "quote": "Real-time fraud scoring is available only on Enterprise."
+    },
+    {
+      "evidence_id": "e2",
+      "doc_id": "i2",
+      "quote": "Starter users now get real-time fraud scoring at no extra cost."
+    }
+  ],
+  "confidence": {
+    "overall": "low",
+    "notes": "Rule-based baseline; improve with stronger semantic extraction in Week 3."
+  }
+}

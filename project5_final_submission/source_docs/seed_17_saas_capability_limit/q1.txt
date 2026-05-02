@@ -1,0 +1,6 @@
+doc_id: q1
+source_type: product_page
+title: Features
+date: 2026-03-17
+
+Custom dashboards are available only on Pro and Enterprise tiers.

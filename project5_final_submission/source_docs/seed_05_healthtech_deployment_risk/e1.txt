@@ -1,0 +1,6 @@
+doc_id: e1
+source_type: product_page
+title: Integration
+date: 2026-02-18
+
+PulseTrack integrates with Epic and Cerner. Typical deployment takes 10-12 weeks.

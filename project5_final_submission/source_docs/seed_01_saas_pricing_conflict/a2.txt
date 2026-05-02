@@ -1,0 +1,6 @@
+doc_id: a2
+source_type: press_release
+title: SMB Plan
+date: 2025-12-15
+
+SMB plan starts at $19/user and includes API support.

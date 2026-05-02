@@ -1,0 +1,217 @@
+[
+  {
+    "example_id": "ex_01_b2b_saas_crm",
+    "industry": "B2B SaaS",
+    "input": {
+      "target": "NimbusCRM",
+      "documents": [
+        {
+          "doc_id": "doc_a",
+          "source_type": "product_page",
+          "title": "NimbusCRM Pricing",
+          "date": "2026-02-10",
+          "content": "NimbusCRM offers Starter at $29/seat/month and Growth at $79/seat/month. Enterprise is annual contract only with SSO and audit logs. API access is available only on Growth and above."
+        },
+        {
+          "doc_id": "doc_b",
+          "source_type": "press_release",
+          "title": "NimbusCRM Launches SMB Plan",
+          "date": "2025-12-15",
+          "content": "The new SMB plan starts at $19 per user and includes API support. NimbusCRM is the easiest platform for modern teams."
+        }
+      ]
+    },
+    "expected_output": {
+      "target": "NimbusCRM",
+      "positioning_summary": "NimbusCRM appears positioned as a tiered seat-based CRM for SMB to mid-market teams, with enterprise controls gated behind annual contracts.",
+      "key_differentiators": [
+        {
+          "claim": "Enterprise security features (SSO, audit logs) are bundled into annual contract tier.",
+          "evidence_ids": ["e1"],
+          "signal_strength": "high"
+        },
+        {
+          "claim": "API access is not universally available across all plans.",
+          "evidence_ids": ["e2", "e3"],
+          "signal_strength": "medium"
+        }
+      ],
+      "pricing_signals": [
+        {
+          "claim": "Seat-based monthly tiers at $29 and $79 are explicitly listed.",
+          "evidence_ids": ["e1"],
+          "pricing_type": "seat_based"
+        },
+        {
+          "claim": "A conflicting lower entry price ($19/user) is stated in an older press release.",
+          "evidence_ids": ["e4"],
+          "pricing_type": "seat_based"
+        }
+      ],
+      "target_segments": [
+        {
+          "segment": "SMB and growth-stage sales teams",
+          "evidence_ids": ["e1", "e4"]
+        },
+        {
+          "segment": "Enterprise buyers requiring compliance features",
+          "evidence_ids": ["e1"]
+        }
+      ],
+      "identified_weaknesses": [
+        {
+          "weakness": "Potential plan friction due to API gating and conflicting public pricing messages.",
+          "evidence_ids": ["e2", "e4"]
+        }
+      ],
+      "conflicts": [
+        {
+          "topic": "entry_price_and_api_on_lowest_tier",
+          "claims": [
+            {
+              "statement": "Starter is $29/seat/month; API on Growth+ only.",
+              "evidence_ids": ["e1", "e2"]
+            },
+            {
+              "statement": "SMB plan starts at $19/user with API support.",
+              "evidence_ids": ["e4", "e3"]
+            }
+          ],
+          "resolution_status": "partially_resolved",
+          "resolution_rationale": "Claims conflict; newer product page may be more current but conflict should remain explicit."
+        }
+      ],
+      "evidence_map": [
+        {
+          "evidence_id": "e1",
+          "doc_id": "doc_a",
+          "quote": "Starter at $29/seat/month and Growth at $79/seat/month."
+        },
+        {
+          "evidence_id": "e2",
+          "doc_id": "doc_a",
+          "quote": "API access is available only on Growth and above."
+        },
+        {
+          "evidence_id": "e3",
+          "doc_id": "doc_b",
+          "quote": "includes API support."
+        },
+        {
+          "evidence_id": "e4",
+          "doc_id": "doc_b",
+          "quote": "SMB plan starts at $19 per user."
+        }
+      ],
+      "confidence": {
+        "overall": "medium",
+        "notes": "Strong pricing evidence exists, but conflicting sources reduce confidence."
+      }
+    }
+  },
+  {
+    "example_id": "ex_02_healthtech_remote_monitoring",
+    "industry": "HealthTech",
+    "input": {
+      "target": "CardioWatch Cloud",
+      "documents": [
+        {
+          "doc_id": "doc_c",
+          "source_type": "blog_post",
+          "title": "CardioWatch for Hospital Systems",
+          "date": "2026-01-08",
+          "content": "CardioWatch Cloud integrates with Epic and Cerner. Typical deployment takes 10-12 weeks. Most customers are regional hospital systems with 200+ beds."
+        },
+        {
+          "doc_id": "doc_d",
+          "source_type": "pitch_deck",
+          "title": "CardioWatch Investor Deck",
+          "date": "2025-11-01",
+          "content": "Our AI triage is 99.9% accurate and ideal for every care setting from solo clinics to national chains. Contact sales for pricing."
+        }
+      ]
+    },
+    "expected_output": {
+      "target": "CardioWatch Cloud",
+      "positioning_summary": "CardioWatch Cloud is positioned as an enterprise remote-monitoring platform oriented toward larger hospital systems, with interoperability as a key selling point.",
+      "key_differentiators": [
+        {
+          "claim": "EHR integration with Epic and Cerner is emphasized as a practical deployment advantage.",
+          "evidence_ids": ["f1"],
+          "signal_strength": "high"
+        }
+      ],
+      "pricing_signals": [
+        {
+          "claim": "No explicit numeric pricing is provided; pricing appears sales-led.",
+          "evidence_ids": ["f4"],
+          "pricing_type": "contract"
+        }
+      ],
+      "target_segments": [
+        {
+          "segment": "Regional hospital systems (200+ beds)",
+          "evidence_ids": ["f3"]
+        }
+      ],
+      "identified_weaknesses": [
+        {
+          "weakness": "Long deployment timeline may limit adoption in smaller or resource-constrained providers.",
+          "evidence_ids": ["f2"]
+        },
+        {
+          "weakness": "Broad marketing claim ('ideal for every care setting') lacks supporting detail.",
+          "evidence_ids": ["f5"]
+        }
+      ],
+      "conflicts": [
+        {
+          "topic": "ideal_customer_profile_scope",
+          "claims": [
+            {
+              "statement": "Most customers are regional hospital systems with 200+ beds.",
+              "evidence_ids": ["f3"]
+            },
+            {
+              "statement": "Ideal for every care setting from solo clinics to national chains.",
+              "evidence_ids": ["f5"]
+            }
+          ],
+          "resolution_status": "unresolved",
+          "resolution_rationale": "One source indicates concentrated enterprise adoption while another makes broad marketing scope claims."
+        }
+      ],
+      "evidence_map": [
+        {
+          "evidence_id": "f1",
+          "doc_id": "doc_c",
+          "quote": "integrates with Epic and Cerner"
+        },
+        {
+          "evidence_id": "f2",
+          "doc_id": "doc_c",
+          "quote": "Typical deployment takes 10-12 weeks."
+        },
+        {
+          "evidence_id": "f3",
+          "doc_id": "doc_c",
+          "quote": "Most customers are regional hospital systems with 200+ beds."
+        },
+        {
+          "evidence_id": "f4",
+          "doc_id": "doc_d",
+          "quote": "Contact sales for pricing."
+        },
+        {
+          "evidence_id": "f5",
+          "doc_id": "doc_d",
+          "quote": "ideal for every care setting from solo clinics to national chains."
+        }
+      ],
+      "confidence": {
+        "overall": "medium",
+        "notes": "Segment and integration signals are concrete; some deck claims are marketing-heavy."
+      }
+    }
+  }
+]

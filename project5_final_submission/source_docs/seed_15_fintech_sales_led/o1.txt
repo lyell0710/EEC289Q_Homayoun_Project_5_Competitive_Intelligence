@@ -1,0 +1,6 @@
+doc_id: o1
+source_type: product_page
+title: Treasury Suite
+date: 2026-02-16
+
+Automated liquidity forecasting for CFO teams. Contact sales for enterprise pricing.

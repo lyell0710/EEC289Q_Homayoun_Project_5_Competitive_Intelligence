@@ -1,0 +1,6 @@
+doc_id: h2
+source_type: press_release
+title: SMB launch
+date: 2026-02-28
+
+Launching lightweight onboarding for startups under 20 employees.

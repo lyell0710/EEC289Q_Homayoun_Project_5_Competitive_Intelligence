@@ -1,0 +1,6 @@
+doc_id: s1
+source_type: press_release
+title: Announcement
+date: 2026-01-12
+
+WireShield unveils a modern platform for secure treasury operations.

@@ -1,0 +1,6 @@
+doc_id: f1
+source_type: pitch_deck
+title: Deck
+date: 2026-01-01
+
+Contact sales for pricing. AI triage improves review speed by 40%.

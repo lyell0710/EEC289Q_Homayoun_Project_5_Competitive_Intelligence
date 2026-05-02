@@ -1,0 +1,6 @@
+doc_id: t1
+source_type: press_release
+title: 2025 launch price
+date: 2025-06-01
+
+TaskOrbit launches at $15/user monthly.

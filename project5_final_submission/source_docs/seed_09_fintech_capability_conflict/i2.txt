@@ -1,0 +1,6 @@
+doc_id: i2
+source_type: blog_post
+title: Starter package
+date: 2026-02-14
+
+Starter users now get real-time fraud scoring at no extra cost.

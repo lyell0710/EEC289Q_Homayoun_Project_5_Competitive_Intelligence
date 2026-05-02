@@ -1,0 +1,6 @@
+doc_id: l2
+source_type: press_release
+title: Award
+date: 2026-01-21
+
+Recognized as most innovative brand platform.

@@ -1,0 +1,6 @@
+doc_id: l1
+source_type: blog_post
+title: Vision
+date: 2026-01-20
+
+BrandFlow is the future of collaborative growth and world-class brand execution.

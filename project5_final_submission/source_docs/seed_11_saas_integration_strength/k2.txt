@@ -1,0 +1,6 @@
+doc_id: k2
+source_type: press_release
+title: Partner update
+date: 2026-02-22
+
+Launched certified Salesforce package and migration toolkit.

@@ -1,0 +1,59 @@
+[
+  {
+    "task_id": "headroom_01_sparse_press_release",
+    "input": {
+      "target": "AlphaOps",
+      "documents": [
+        {"doc_id": "h1", "source_type": "press_release", "title": "Launch", "content": "AlphaOps launches a groundbreaking platform for modern teams."}
+      ]
+    },
+    "incorrect_response_example": "AlphaOps targets enterprise operations teams and offers usage-based pricing.",
+    "why_model_fails": "The model over-generalizes from vague language and fabricates segment/pricing signals."
+  },
+  {
+    "task_id": "headroom_02_same_company_conflicting_pricing",
+    "input": {
+      "target": "BetaCloud",
+      "documents": [
+        {"doc_id": "h2", "source_type": "product_page", "title": "Pricing", "content": "Starter starts at $49 per seat."},
+        {"doc_id": "h3", "source_type": "blog_post", "title": "SMB update", "content": "SMB package starts at $29 per seat."}
+      ]
+    },
+    "incorrect_response_example": "BetaCloud pricing starts at $29 per seat.",
+    "why_model_fails": "The model silently picks one source instead of preserving attribution and surfacing conflict."
+  },
+  {
+    "task_id": "headroom_03_marketing_only_deck",
+    "input": {
+      "target": "GammaHealth",
+      "documents": [
+        {"doc_id": "h4", "source_type": "pitch_deck", "title": "Vision", "content": "GammaHealth is the future of care with revolutionary impact and world-class outcomes."}
+      ]
+    },
+    "incorrect_response_example": "GammaHealth differentiates through Epic integration and lower total cost.",
+    "why_model_fails": "The model hallucinates factual differentiators from purely promotional language."
+  },
+  {
+    "task_id": "headroom_04_conflicting_capability_scope",
+    "input": {
+      "target": "DeltaRisk",
+      "documents": [
+        {"doc_id": "h5", "source_type": "product_page", "title": "Capabilities", "content": "Real-time scoring is available only on Enterprise."},
+        {"doc_id": "h6", "source_type": "press_release", "title": "Starter launch", "content": "Starter now includes real-time scoring."}
+      ]
+    },
+    "incorrect_response_example": "Real-time scoring is available on all plans.",
+    "why_model_fails": "The model merges contradictory claims into a confident but unsupported conclusion."
+  },
+  {
+    "task_id": "headroom_05_long_noise_with_single_fact",
+    "input": {
+      "target": "EpsilonPay",
+      "documents": [
+        {"doc_id": "h7", "source_type": "blog_post", "title": "Story", "content": "Long marketing narrative... many slogans... one factual line: 'contact sales for pricing'."}
+      ]
+    },
+    "incorrect_response_example": "EpsilonPay offers transparent tiered pricing and serves SMB merchants.",
+    "why_model_fails": "Signal-to-noise imbalance causes the model to infer unsupported pricing structure and segment."
+  }
+]

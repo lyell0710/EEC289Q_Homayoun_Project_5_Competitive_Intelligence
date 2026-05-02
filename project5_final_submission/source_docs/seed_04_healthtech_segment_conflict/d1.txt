@@ -1,0 +1,6 @@
+doc_id: d1
+source_type: blog_post
+title: Hospital focus
+date: 2026-01-08
+
+Most customers are regional hospital systems with 200+ beds.

@@ -1,0 +1,6 @@
+doc_id: r1
+source_type: product_page
+title: Product
+date: 2026-01-30
+
+Automates prior authorization workflows for outpatient clinics.

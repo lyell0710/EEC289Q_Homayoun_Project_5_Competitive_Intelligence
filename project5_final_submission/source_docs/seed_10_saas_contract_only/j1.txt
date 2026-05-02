@@ -1,0 +1,6 @@
+doc_id: j1
+source_type: product_page
+title: Pricing
+date: 2026-03-05
+
+OpsGrid is contract-only with annual minimum commitments.

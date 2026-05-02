@@ -1,0 +1,6 @@
+doc_id: o2
+source_type: blog_post
+title: Customer stories
+date: 2026-02-18
+
+Adopted by multinational treasury teams managing 20+ bank relationships.

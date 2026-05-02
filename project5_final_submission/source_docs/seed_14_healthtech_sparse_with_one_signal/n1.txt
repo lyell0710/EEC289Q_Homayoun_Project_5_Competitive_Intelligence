@@ -1,0 +1,6 @@
+doc_id: n1
+source_type: press_release
+title: Partnership
+date: 2026-03-03
+
+EchoCare signs strategic partnership with a major device manufacturer.

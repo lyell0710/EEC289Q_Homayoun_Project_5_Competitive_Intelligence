@@ -1,0 +1,6 @@
+doc_id: d2
+source_type: pitch_deck
+title: Every setting
+date: 2025-11-01
+
+Ideal for every care setting from solo clinics to national chains.

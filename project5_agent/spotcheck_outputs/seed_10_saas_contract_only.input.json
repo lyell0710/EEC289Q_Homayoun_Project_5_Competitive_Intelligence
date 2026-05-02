@@ -1,0 +1,19 @@
+{
+  "target": "OpsGrid",
+  "documents": [
+    {
+      "doc_id": "j1",
+      "source_type": "product_page",
+      "title": "Pricing",
+      "date": "2026-03-05",
+      "content": "OpsGrid is contract-only with annual minimum commitments."
+    },
+    {
+      "doc_id": "j2",
+      "source_type": "blog_post",
+      "title": "Customer profile",
+      "date": "2026-03-06",
+      "content": "Best fit for multi-site operations teams."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+doc_id: i1
+source_type: product_page
+title: Features
+date: 2026-02-01
+
+Real-time fraud scoring is available only on Enterprise.

@@ -1,0 +1,19 @@
+{
+  "target": "TaskOrbit",
+  "documents": [
+    {
+      "doc_id": "t1",
+      "source_type": "press_release",
+      "title": "2025 launch price",
+      "date": "2025-06-01",
+      "content": "TaskOrbit launches at $15/user monthly."
+    },
+    {
+      "doc_id": "t2",
+      "source_type": "product_page",
+      "title": "Current pricing",
+      "date": "2026-04-25",
+      "content": "Starter plan is now $25/user monthly after adding workflow automation."
+    }
+  ]
+}

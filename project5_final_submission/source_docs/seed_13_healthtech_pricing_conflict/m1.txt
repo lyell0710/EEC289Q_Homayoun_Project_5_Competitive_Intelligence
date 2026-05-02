@@ -1,0 +1,6 @@
+doc_id: m1
+source_type: product_page
+title: Pricing
+date: 2026-04-02
+
+Platform fee starts at $12,000 per year for provider groups.

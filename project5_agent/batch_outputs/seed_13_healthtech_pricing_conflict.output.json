@@ -1,0 +1,60 @@
+{
+  "target": "MediRoute",
+  "positioning_summary": "MediRoute appears positioned based on extracted signals in pricing, features, and target-customer language.",
+  "key_differentiators": [],
+  "pricing_signals": [
+    {
+      "claim": "Platform fee starts at $12,000 per year for provider groups.",
+      "evidence_ids": [
+        "e1"
+      ],
+      "pricing_type": "unknown"
+    },
+    {
+      "claim": "Early adopter package starts at $8,000 annually.",
+      "evidence_ids": [
+        "e2"
+      ],
+      "pricing_type": "unknown"
+    }
+  ],
+  "target_segments": [],
+  "identified_weaknesses": [],
+  "conflicts": [
+    {
+      "topic": "pricing",
+      "claims": [
+        {
+          "statement": "m1 lists minimum entry price $12",
+          "evidence_ids": [
+            "e1"
+          ]
+        },
+        {
+          "statement": "m2 lists minimum entry price $8",
+          "evidence_ids": [
+            "e2"
+          ]
+        }
+      ],
+      "resolution_status": "unresolved",
+      "resolution_rationale": "Different documents imply different entry prices."
+    }
+  ],
+  "evidence_map": [
+    {
+      "evidence_id": "e1",
+      "doc_id": "m1",
+      "quote": "Platform fee starts at $12,000 per year for provider groups."
+    },
+    {
+      "evidence_id": "e2",
+      "doc_id": "m2",
+      "quote": "Early adopter package starts at $8,000 annually."
+    }
+  ],
+  "confidence": {
+    "overall": "low",
+    "notes": "Rule-based baseline; improve with stronger semantic extraction in Week 3."
+  }
+}

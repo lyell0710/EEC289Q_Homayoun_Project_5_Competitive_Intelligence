@@ -1,0 +1,137 @@
+{
+  "target": "NimbusCRM",
+  "positioning_summary": "NimbusCRM appears positioned based on extracted signals in pricing, features, and target-customer language.",
+  "key_differentiators": [
+    {
+      "claim": "Enterprise is annual contract only with SSO and audit logs.",
+      "evidence_ids": [
+        "e2"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "claim": "API access is available only on Growth and above.",
+      "evidence_ids": [
+        "e3"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "claim": "The new SMB plan starts at $19 per user and includes API support.",
+      "evidence_ids": [
+        "e4"
+      ],
+      "signal_strength": "medium"
+    }
+  ],
+  "pricing_signals": [
+    {
+      "claim": "NimbusCRM offers Starter at $29/seat/month and Growth at $79/seat/month.",
+      "evidence_ids": [
+        "e1"
+      ],
+      "pricing_type": "tiered"
+    },
+    {
+      "claim": "The new SMB plan starts at $19 per user and includes API support.",
+      "evidence_ids": [
+        "e4"
+      ],
+      "pricing_type": "seat_based"
+    }
+  ],
+  "target_segments": [
+    {
+      "segment": "Enterprise",
+      "evidence_ids": [
+        "e2"
+      ]
+    },
+    {
+      "segment": "SMB",
+      "evidence_ids": [
+        "e4"
+      ]
+    }
+  ],
+  "identified_weaknesses": [
+    {
+      "weakness": "Enterprise is annual contract only with SSO and audit logs.",
+      "evidence_ids": [
+        "e2"
+      ]
+    },
+    {
+      "weakness": "API access is available only on Growth and above.",
+      "evidence_ids": [
+        "e3"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "pricing",
+      "claims": [
+        {
+          "statement": "doc_a lists minimum entry price $29",
+          "evidence_ids": [
+            "e1"
+          ]
+        },
+        {
+          "statement": "doc_b lists minimum entry price $19",
+          "evidence_ids": [
+            "e4"
+          ]
+        }
+      ],
+      "resolution_status": "unresolved",
+      "resolution_rationale": "Different documents imply different entry prices."
+    },
+    {
+      "topic": "api_access_scope",
+      "claims": [
+        {
+          "statement": "API access is available only on Growth and above.",
+          "evidence_ids": [
+            "e3"
+          ]
+        },
+        {
+          "statement": "The new SMB plan starts at $19 per user and includes API support.",
+          "evidence_ids": [
+            "e4"
+          ]
+        }
+      ],
+      "resolution_status": "unresolved",
+      "resolution_rationale": "API access is described with potentially conflicting scope."
+    }
+  ],
+  "evidence_map": [
+    {
+      "evidence_id": "e1",
+      "doc_id": "doc_a",
+      "quote": "NimbusCRM offers Starter at $29/seat/month and Growth at $79/seat/month."
+    },
+    {
+      "evidence_id": "e2",
+      "doc_id": "doc_a",
+      "quote": "Enterprise is annual contract only with SSO and audit logs."
+    },
+    {
+      "evidence_id": "e3",
+      "doc_id": "doc_a",
+      "quote": "API access is available only on Growth and above."
+    },
+    {
+      "evidence_id": "e4",
+      "doc_id": "doc_b",
+      "quote": "The new SMB plan starts at $19 per user and includes API support."
+    }
+  ],
+  "confidence": {
+    "overall": "medium",
+    "notes": "Rule-based baseline; improve with stronger semantic extraction in Week 3."
+  }
+}

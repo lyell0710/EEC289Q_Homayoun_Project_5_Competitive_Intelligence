@@ -1,0 +1,33 @@
+{
+  "target": "CardioWatch Cloud",
+  "positioning_summary": "CardioWatch Cloud appears positioned based on extracted signals in pricing, features, and target-customer language.",
+  "key_differentiators": [],
+  "pricing_signals": [],
+  "target_segments": [
+    {
+      "segment": "Healthcare providers",
+      "evidence_ids": [
+        "e1"
+      ]
+    },
+    {
+      "segment": "Large hospitals (200+ beds)",
+      "evidence_ids": [
+        "e1"
+      ]
+    }
+  ],
+  "identified_weaknesses": [],
+  "conflicts": [],
+  "evidence_map": [
+    {
+      "evidence_id": "e1",
+      "doc_id": "d1",
+      "quote": "Most customers are regional hospital systems with 200+ beds."
+    }
+  ],
+  "confidence": {
+    "overall": "low",
+    "notes": "Rule-based baseline; improve with stronger semantic extraction in Week 3."
+  }
+}

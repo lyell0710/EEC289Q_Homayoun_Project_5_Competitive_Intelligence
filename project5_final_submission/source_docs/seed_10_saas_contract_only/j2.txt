@@ -1,0 +1,6 @@
+doc_id: j2
+source_type: blog_post
+title: Customer profile
+date: 2026-03-06
+
+Best fit for multi-site operations teams.

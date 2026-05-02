@@ -1,0 +1,6 @@
+doc_id: r2
+source_type: blog_post
+title: Customer result
+date: 2026-02-03
+
+Clinics report 30% faster authorization turnaround after deployment.

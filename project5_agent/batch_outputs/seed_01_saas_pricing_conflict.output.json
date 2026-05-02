@@ -1,0 +1,125 @@
+{
+  "target": "NimbusCRM",
+  "positioning_summary": "NimbusCRM appears positioned based on extracted signals in pricing, features, and target-customer language.",
+  "key_differentiators": [
+    {
+      "claim": "API access is only on Growth and above.",
+      "evidence_ids": [
+        "e3"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "claim": "SMB plan starts at $19/user and includes API support.",
+      "evidence_ids": [
+        "e4"
+      ],
+      "signal_strength": "medium"
+    }
+  ],
+  "pricing_signals": [
+    {
+      "claim": "Starter is $29/seat.",
+      "evidence_ids": [
+        "e1"
+      ],
+      "pricing_type": "tiered"
+    },
+    {
+      "claim": "Growth is $79/seat.",
+      "evidence_ids": [
+        "e2"
+      ],
+      "pricing_type": "tiered"
+    },
+    {
+      "claim": "SMB plan starts at $19/user and includes API support.",
+      "evidence_ids": [
+        "e4"
+      ],
+      "pricing_type": "unknown"
+    }
+  ],
+  "target_segments": [
+    {
+      "segment": "SMB",
+      "evidence_ids": [
+        "e4"
+      ]
+    }
+  ],
+  "identified_weaknesses": [
+    {
+      "weakness": "API access is only on Growth and above.",
+      "evidence_ids": [
+        "e3"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "pricing",
+      "claims": [
+        {
+          "statement": "a1 lists minimum entry price $29",
+          "evidence_ids": [
+            "e1"
+          ]
+        },
+        {
+          "statement": "a2 lists minimum entry price $19",
+          "evidence_ids": [
+            "e4"
+          ]
+        }
+      ],
+      "resolution_status": "unresolved",
+      "resolution_rationale": "Different documents imply different entry prices."
+    },
+    {
+      "topic": "api_access_scope",
+      "claims": [
+        {
+          "statement": "API access is only on Growth and above.",
+          "evidence_ids": [
+            "e3"
+          ]
+        },
+        {
+          "statement": "SMB plan starts at $19/user and includes API support.",
+          "evidence_ids": [
+            "e4"
+          ]
+        }
+      ],
+      "resolution_status": "unresolved",
+      "resolution_rationale": "API access is described with potentially conflicting scope."
+    }
+  ],
+  "evidence_map": [
+    {
+      "evidence_id": "e1",
+      "doc_id": "a1",
+      "quote": "Starter is $29/seat."
+    },
+    {
+      "evidence_id": "e2",
+      "doc_id": "a1",
+      "quote": "Growth is $79/seat."
+    },
+    {
+      "evidence_id": "e3",
+      "doc_id": "a1",
+      "quote": "API access is only on Growth and above."
+    },
+    {
+      "evidence_id": "e4",
+      "doc_id": "a2",
+      "quote": "SMB plan starts at $19/user and includes API support."
+    }
+  ],
+  "confidence": {
+    "overall": "medium",
+    "notes": "Rule-based baseline; improve with stronger semantic extraction in Week 3."
+  }
+}

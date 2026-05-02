@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CompetitiveIntelligenceOutput",
+  "type": "object",
+  "required": [
+    "target",
+    "positioning_summary",
+    "key_differentiators",
+    "pricing_signals",
+    "target_segments",
+    "identified_weaknesses",
+    "conflicts",
+    "evidence_map",
+    "confidence"
+  ],
+  "properties": {
+    "target": {
+      "type": "string"
+    },
+    "positioning_summary": {
+      "type": "string",
+      "description": "Brief synthesis of competitive positioning. Use 'Insufficient evidence' when needed."
+    },
+    "key_differentiators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "evidence_ids"],
+        "properties": {
+          "claim": { "type": "string" },
+          "evidence_ids": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          },
+          "signal_strength": {
+            "type": "string",
+            "enum": ["high", "medium", "low"]
+          }
+        }
+      }
+    },
+    "pricing_signals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "evidence_ids"],
+        "properties": {
+          "claim": { "type": "string" },
+          "evidence_ids": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          },
+          "pricing_type": {
+            "type": "string",
+            "enum": ["usage_based", "seat_based", "tiered", "contract", "unknown"]
+          }
+        }
+      }
+    },
+    "target_segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["segment", "evidence_ids"],
+        "properties": {
+          "segment": { "type": "string" },
+          "evidence_ids": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          }
+        }
+      }
+    },
+    "identified_weaknesses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["weakness", "evidence_ids"],
+        "properties": {
+          "weakness": { "type": "string" },
+          "evidence_ids": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          }
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "description": "Contradictory claims across documents.",
+      "items": {
+        "type": "object",
+        "required": ["topic", "claims", "resolution_status"],
+        "properties": {
+          "topic": { "type": "string" },
+          "claims": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["statement", "evidence_ids"],
+              "properties": {
+                "statement": { "type": "string" },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": { "type": "string" },
+                  "minItems": 1
+                }
+              }
+            }
+          },
+          "resolution_status": {
+            "type": "string",
+            "enum": ["unresolved", "partially_resolved", "resolved_with_preference"]
+          },
+          "resolution_rationale": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidence_map": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["evidence_id", "doc_id", "quote"],
+        "properties": {
+          "evidence_id": { "type": "string" },
+          "doc_id": { "type": "string" },
+          "quote": { "type": "string" }
+        }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "required": ["overall", "notes"],
+      "properties": {
+        "overall": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

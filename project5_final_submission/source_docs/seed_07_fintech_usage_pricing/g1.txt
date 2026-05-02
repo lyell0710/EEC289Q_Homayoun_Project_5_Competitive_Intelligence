@@ -1,0 +1,6 @@
+doc_id: g1
+source_type: product_page
+title: Pricing
+date: 2026-04-01
+
+LedgerAPI charges $0.002 per transaction with volume discounts above 10M monthly calls.

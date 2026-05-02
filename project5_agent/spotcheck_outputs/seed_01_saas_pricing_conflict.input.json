@@ -1,0 +1,19 @@
+{
+  "target": "NimbusCRM",
+  "documents": [
+    {
+      "doc_id": "a1",
+      "source_type": "product_page",
+      "title": "Pricing",
+      "date": "2026-02-10",
+      "content": "Starter is $29/seat. Growth is $79/seat. API access is only on Growth and above."
+    },
+    {
+      "doc_id": "a2",
+      "source_type": "press_release",
+      "title": "SMB Plan",
+      "date": "2025-12-15",
+      "content": "SMB plan starts at $19/user and includes API support."
+    }
+  ]
+}

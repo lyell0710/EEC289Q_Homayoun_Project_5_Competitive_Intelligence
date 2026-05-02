@@ -1,0 +1,6 @@
+doc_id: p2
+source_type: press_release
+title: Self-serve launch
+date: 2026-04-12
+
+Introduced instant self-serve onboarding for merchants processing under $50k monthly.

@@ -1,0 +1,52 @@
+{
+  "target": "PulseTrack",
+  "positioning_summary": "PulseTrack appears positioned based on extracted signals in pricing, features, and target-customer language.",
+  "key_differentiators": [
+    {
+      "claim": "PulseTrack integrates with Epic and Cerner.",
+      "evidence_ids": [
+        "e1"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "claim": "Typical deployment takes 10-12 weeks.",
+      "evidence_ids": [
+        "e2"
+      ],
+      "signal_strength": "medium"
+    }
+  ],
+  "pricing_signals": [],
+  "target_segments": [],
+  "identified_weaknesses": [
+    {
+      "weakness": "Typical deployment takes 10-12 weeks.",
+      "evidence_ids": [
+        "e2"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "evidence_map": [
+    {
+      "evidence_id": "e1",
+      "doc_id": "e1",
+      "quote": "PulseTrack integrates with Epic and Cerner."
+    },
+    {
+      "evidence_id": "e2",
+      "doc_id": "e1",
+      "quote": "Typical deployment takes 10-12 weeks."
+    },
+    {
+      "evidence_id": "e3",
+      "doc_id": "e2",
+      "quote": "PulseTrack signs five regional health systems this quarter."
+    }
+  ],
+  "confidence": {
+    "overall": "low",
+    "notes": "Rule-based baseline; improve with stronger semantic extraction in Week 3."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "target": "NimbusCRM",
+  "documents": [
+    {
+      "doc_id": "doc_a",
+      "source_type": "product_page",
+      "title": "NimbusCRM Pricing",
+      "date": "2026-02-10",
+      "content": "NimbusCRM offers Starter at $29/seat/month and Growth at $79/seat/month. Enterprise is annual contract only with SSO and audit logs. API access is available only on Growth and above."
+    },
+    {
+      "doc_id": "doc_b",
+      "source_type": "press_release",
+      "title": "NimbusCRM Launches SMB Plan",
+      "date": "2025-12-15",
+      "content": "The new SMB plan starts at $19 per user and includes API support. NimbusCRM is the easiest platform for modern teams."
+    }
+  ]
+}

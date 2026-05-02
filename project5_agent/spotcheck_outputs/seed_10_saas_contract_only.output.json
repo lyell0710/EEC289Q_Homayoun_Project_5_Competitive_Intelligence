@@ -1,0 +1,35 @@
+{
+  "target": "OpsGrid",
+  "positioning_summary": "OpsGrid appears positioned based on extracted signals in pricing, features, and target-customer language.",
+  "key_differentiators": [
+    {
+      "claim": "OpsGrid is contract-only with annual minimum commitments.",
+      "evidence_ids": [
+        "e1"
+      ],
+      "signal_strength": "medium"
+    }
+  ],
+  "pricing_signals": [],
+  "target_segments": [],
+  "identified_weaknesses": [
+    {
+      "weakness": "OpsGrid is contract-only with annual minimum commitments.",
+      "evidence_ids": [
+        "e1"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "evidence_map": [
+    {
+      "evidence_id": "e1",
+      "doc_id": "j1",
+      "quote": "OpsGrid is contract-only with annual minimum commitments."
+    }
+  ],
+  "confidence": {
+    "overall": "low",
+    "notes": "Rule-based baseline; improve with stronger semantic extraction in Week 3."
+  }
+}

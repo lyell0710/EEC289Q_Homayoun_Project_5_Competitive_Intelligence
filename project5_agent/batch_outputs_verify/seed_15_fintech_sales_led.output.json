@@ -1,0 +1,42 @@
+{
+  "target": "TreasuryBeam",
+  "positioning_summary": "TreasuryBeam appears positioned based on extracted signals in pricing, features, and target-customer language.",
+  "key_differentiators": [],
+  "pricing_signals": [
+    {
+      "claim": "Contact sales for enterprise pricing.",
+      "evidence_ids": [
+        "e1"
+      ],
+      "pricing_type": "contract"
+    }
+  ],
+  "target_segments": [
+    {
+      "segment": "Enterprise",
+      "evidence_ids": [
+        "e1"
+      ]
+    }
+  ],
+  "identified_weaknesses": [
+    {
+      "weakness": "Contact sales for enterprise pricing.",
+      "evidence_ids": [
+        "e1"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "evidence_map": [
+    {
+      "evidence_id": "e1",
+      "doc_id": "o1",
+      "quote": "Contact sales for enterprise pricing."
+    }
+  ],
+  "confidence": {
+    "overall": "low",
+    "notes": "Rule-based baseline; improve with stronger semantic extraction in Week 3."
+  }
+}

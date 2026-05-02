@@ -1,0 +1,6 @@
+doc_id: b1
+source_type: press_release
+title: Launch
+date: 2026-01-01
+
+FlowBoard launches a next-gen productivity platform for modern teams.

@@ -1,0 +1,6 @@
+doc_id: m2
+source_type: press_release
+title: Launch package
+date: 2025-12-10
+
+Early adopter package starts at $8,000 annually.

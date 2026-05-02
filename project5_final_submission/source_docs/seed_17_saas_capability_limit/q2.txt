@@ -1,0 +1,6 @@
+doc_id: q2
+source_type: blog_post
+title: Growth narrative
+date: 2026-03-19
+
+Teams choose InsightLoop for flexible reporting.

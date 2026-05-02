@@ -1,0 +1,28 @@
+{
+  "target": "LedgerAPI",
+  "positioning_summary": "LedgerAPI appears positioned based on extracted signals in pricing, features, and target-customer language.",
+  "key_differentiators": [],
+  "pricing_signals": [
+    {
+      "claim": "LedgerAPI charges $0.002 per transaction with volume discounts above 10M monthly calls.",
+      "evidence_ids": [
+        "e1"
+      ],
+      "pricing_type": "unknown"
+    }
+  ],
+  "target_segments": [],
+  "identified_weaknesses": [],
+  "conflicts": [],
+  "evidence_map": [
+    {
+      "evidence_id": "e1",
+      "doc_id": "g1",
+      "quote": "LedgerAPI charges $0.002 per transaction with volume discounts above 10M monthly calls."
+    }
+  ],
+  "confidence": {
+    "overall": "low",
+    "notes": "Rule-based baseline; improve with stronger semantic extraction in Week 3."
+  }
+}
